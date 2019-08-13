@@ -1,6 +1,5 @@
 body {
   font-size: 15px;
-  height: 100%;
   color: #333;
   min-width: 320px;
   margin: 0;
@@ -45,7 +44,7 @@ li {
   color: #fff;
   text-align: center;
   box-sizing: border-box;
-  background: #0066b3;
+  background: #004d2a;
 }
 .wrapper header div {
   position: fixed;
@@ -93,11 +92,16 @@ li {
 }
 .wrapper .tab .content .right {
   width: 65%;
-  color: #666;
-  font-size: 15px;
   position: relative;
-  padding-right: 30px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+.wrapper .tab .content .right .right_name {
+  color: #666;
+  font-size: 13px;
   white-space: normal;
+  padding-right: 30px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -144,7 +148,7 @@ li {
   font-size: 25px;
   line-height: 55px;
   text-align: center;
-  color: #0066b3;
+  color: #004d2a;
   font-weight: normal;
   font-style: normal;
   font-family: "iconfont" !important;
@@ -336,7 +340,7 @@ li {
   top: 50%;
   right: 22px;
   transform: translate(0, -50%);
-  border: 2px solid #0066b3;
+  border: 2px solid #004d2a;
   border-radius: 50%;
 }
 .wrapper .payType .payBox .radioBox label .icon_radio .iconfont {
@@ -344,7 +348,7 @@ li {
   top: -17%;
   left: -8%;
   font-size: 27px;
-  color: #0066b3;
+  color: #004d2a;
 }
 .wrapper .payType .payBox .radioBox .radiobox_payWay {
   visibility: hidden;
@@ -373,21 +377,10 @@ li {
   display: inline-block;
   border: none;
   color: #fff;
-  background-color: #0F70B7;
+  background-color: #004d2a;
   font-size: 18px;
   height: 100%;
   width: 100%;
   border-radius: 0;
-}
-.wrapper .bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999999;
-  height: 100%;
-  background-color: #000;
-  opacity: 0.5;
-  display: none;
 }
 /*# sourceMappingURL=index.css.map */

@@ -5,17 +5,28 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>正邦教育</title>
+<!--    <link rel="stylesheet" href="./css/mui/mui.min.css">-->
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/mui/dialog.css">
     <script type="text/javascript" src="./js/jquery-3.2.1.js"></script>
-     <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/mDialogMin.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <style>
+        .dialog_load {
+            background: rgba(0,0,0,.7);padding:24px 25px
+        }
+        .toast {
+            background: rgba(0,0,0,.7);
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
 <!--        头部-->
         <header style="font-size: 18px;">
-            <div><span class="title">正邦学堂-实验小学兴趣班学费</span></div>
+            <div><span class="title">正邦教育-实验小学兴趣班学费</span></div>
             <a class="icon_back" style="display: block;"></a>
         </header>
 <!--        项目头部-->
@@ -25,7 +36,7 @@
                     <span>项目</span>
                 </div>
                 <div class="right">
-                    <span class="right_name">正邦学堂-实验小学兴趣班学费</span>
+                    <span class="right_name">正邦教育-实验小学兴趣班学费</span>
                     <span class="icon_right">
                          <span class=" iconfont icon-fanhui"></span>
                     </span>
@@ -125,13 +136,12 @@
                 <tbody>
                     <tr>
                     <!-- 输入框 -->
-                    <td class="item_tit" id="name0000190004" value="学生姓名">
+                    <td class="item_tit"  value="学生姓名">
                         <em style="color:red">*</em>
                         在读学校
                     </td>
                     <td class="item_cont ">
-                        <input type="text" id="0000190004" placeholder="请输入学生姓名" name="allInput" >
-                        <img class="arrow" id="icon0000190004" style="width:1rem;display:none;display: none;position: absolute;right: 0px; top: 14px;">
+                        <input type="text"  placeholder="请输入学校" name="allInput" >
                     </td>
                 </tr>
                     <tr>
@@ -158,12 +168,12 @@
                     </tr>
                     <tr>
                         <!-- 下拉框 -->
-                        <td class="item_tit" id="name0000190006" value="性别">
+                        <td class="item_tit"  value="性别">
                             <em style="color:red">*</em>
                             性别
                         </td>
                         <td class="item_cont type_select">
-                            <span id="slt_organization" class="select_ipt0000190006" style="color:#999">
+                            <span id="slt_organization" style="color:#999">
                                 请选择性别
                             </span>
                             <span class="icon_next">
@@ -173,24 +183,22 @@
                     </tr>
                     <tr>
                         <!-- 输入框 -->
-                        <td class="item_tit" id="name0000190007" value="家长姓名">
+                        <td class="item_tit"  value="家长姓名">
                             <em style="color:red">*</em>
                             家长姓名
                         </td>
                         <td class="item_cont ">
-                            <input type="text" id="0000190007" placeholder="请输入家长姓名" name="allInput" >
-                            <img class="arrow" id="icon0000190007" style="width:1rem;display:none;display: none;position: absolute;right: 0px; top: 14px;">
+                            <input type="text" placeholder="请输入家长姓名" name="allInput" >
                         </td>
                     </tr>
                     <tr>
                         <!-- 输入框 -->
-                        <td class="item_tit" id="name0000190008" value="家长联系电话">
+                        <td class="item_tit"  value="家长联系电话">
                             <em style="color:red">*</em>
                             家长联系电话
                         </td>
                         <td class="item_cont ">
-                            <input type="text" id="0000190008" placeholder="请输入家长联系电话" name="allInput">
-                            <img class="arrow" id="icon0000190008" style="width:1rem;display:none;display: none;position: absolute;right: 0px; top: 14px;" >
+                            <input type="text" placeholder="请输入家长联系电话" name="allInput">
                         </td>
 
 
@@ -203,7 +211,7 @@
             <p style="margin-left: 1em; font-size:12px; color: #666;  line-height: 2.25em;">选择支付方式</p>
             <form class="payBox">
                 <span class="radioBox" id="dragonPay">
-                    <label for="radiobox1">
+                    <label class="lab" for="ischecked1"  >
                         <span class="wxLogo">
                             <span class="iconfont icon-weixinzhifu WXColor"></span>
                         </span>
@@ -211,14 +219,14 @@
                             <p>微信</p>
                             <span>微信支付</span>
                         </div>
-                        <span class="icon_radio">
+                        <span class="icon_radio"  style="z-index: 99">
                             <span class="iconfont icon-gougou1"></span>
                         </span>
                     </label>
-<!--                    <input id="radiobox1" class="radiobox_payWay " type="radio" name="radiobox_payWay">-->
+                     <input type="radio" class="wx" value="value" id="ischecked1" checked>
 			    </span>
                 <span class="radioBox" id="dragonPay">
-                    <label for="radiobox1">
+                    <label  class="lab" for="ischecked" >
                         <span class="wxLogo">
                             <span class="iconfont icon-zhifubaozhifu ZFBColor"></span>
                         </span>
@@ -226,21 +234,17 @@
                             <p>支付宝</p>
                             <span>支付宝支付</span>
                         </div>
-                        <span class="icon_radio">
+                        <span class="icon_radio" style="z-index: 99">
                             <span class="iconfont icon-gougou1"></span>
                         </span>
                     </label>
-<!--                    <input id="radiobox1" class="radiobox_payWay " type="radio" name="radiobox_payWay">-->
+                     <input type="radio" class="zfb" value="value" id="ischecked" >
 			    </span>
             </form>
         </div>
 <!--        缴费按钮-->
         <div class="pay">
             <input class="btn btn_search" type="button" value="缴费">
-        </div>
-<!--        遮盖层-->
-        <div class="bg">
-
         </div>
     </div>
 </body>

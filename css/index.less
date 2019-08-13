@@ -1,6 +1,8 @@
+@bgc1: #009944; // 配色1
+@bgc2: #63921a; // 配色2
+@bgc3: #004d2a;  // 配色3
 body {
   font-size: 15px;
-  height: 100%;
   color: #333;
   min-width: 320px;
   margin: 0;
@@ -35,7 +37,7 @@ ul,li {
     color: #fff;
     text-align: center;
     box-sizing: border-box;
-    background: #0066b3;
+    background: @bgc3;
     div {
       position: fixed;
       width: 100%;
@@ -81,13 +83,18 @@ ul,li {
       }
       .right {
         width: 65%;
-        color: #666;
-        font-size: 15px;
         position: relative;
-        padding-right: 30px;
-        white-space: normal;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        .right_name {
+          color: #666;
+          font-size: 13px;
+          white-space: normal;
+          padding-right: 30px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
         .icon_right {
           display: block;
           position: absolute;
@@ -131,7 +138,7 @@ ul,li {
               font-size: 25px;
               line-height: 55px;
               text-align: center;
-              color: #0066b3;
+              color: @bgc3;
               font-weight: normal;
               font-style: normal;
               font-family: "iconfont" !important;
@@ -327,14 +334,14 @@ ul,li {
             top: 50%;
             right: 22px;
             transform: translate(0, -50%);
-            border: 2px solid #0066b3;
+            border: 2px solid @bgc3;
             border-radius: 50%;
             .iconfont {
               position: absolute;
               top: -17%;
               left: -8%;
               font-size: 27px;
-              color: #0066b3;
+              color: @bgc3;
             }
           }
         }
@@ -367,22 +374,11 @@ ul,li {
       display: inline-block;
       border: none;
       color: #fff;
-      background-color: #0F70B7;
+      background-color: @bgc3;
       font-size: 18px;
       height: 100%;
       width: 100%;
       border-radius: 0;
     }
-  }
-  .bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999999;
-    height: 100%;
-    background-color: #000;
-    opacity: 0.5;
-    display: none;
   }
 }
