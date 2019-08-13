@@ -189,7 +189,7 @@ li {
   right: 0;
   top: 0;
 }
-.wrapper .orederBox .orederList li .orederTop .icon_next .iconfont {
+.wrapper .orederBox .orederList li .orederTop .icon_next .abc {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -199,8 +199,15 @@ li {
   transform: rotate(90deg);
   transition: transform 0.5s ease-out;
 }
+.wrapper .orederBox .orederList li .orederTop .up {
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-out;
+}
 .wrapper .orederBox .orederList li .isShow {
   box-sizing: border-box;
+  display: none;
+  overflow: hidden;
+  transition: height 100s;
 }
 .wrapper .orederBox .orederList li .isShow .orederD {
   background: #F4F8FB;

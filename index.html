@@ -8,6 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./fonts/iconfont.css">
+    <script type="text/javascript" src="./js/jquery-3.2.1.js"></script>
+     <script type="text/javascript" src="./js/index.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -36,16 +38,20 @@
                 <li>
                     <div class="orederTop">
                         <span class="checkbox">
-                            <label class="checked" for="checkbox_list">
+                            <label class="checked" onclick="alert(1)">
                             </label>
-                            <input id="checkbox_list" type="checkbox" checked="checked" name="unpaidbillcheck" style="visibility:hidden;">
+<!--                            <input id="checkbox_list" onclick="alert(1)" type="checkbox" checked="checked" name="unpaidbillcheck" style="visibility:hidden;">-->
                         </span>
                         <span class="cash">
                             <span class="ke">街舞</span>
                             <span class="qian">¥16.00</span>
                         </span>
-                        <span class="icon_next" href="#">
-                            <span class=" iconfont icon-fanhui"></span>
+                        <span class="icon_next">
+                            <span class="abc">
+                                 <span class="box">
+                                     <span class=" iconfont icon-fanhui"></span>
+                                 </span>
+                            </span>
                         </span>
                     </div>
                     <div class="isShow">
@@ -71,16 +77,20 @@
                 <li>
                     <div class="orederTop">
                         <span class="checkbox">
-                            <label class="checked" for="checkbox_list">
+                            <label class="checked"  onclick="alert(2)">
                             </label>
-                            <input id="checkbox_list" type="checkbox" checked="checked" name="unpaidbillcheck" style="visibility:hidden;">
+<!--                            <input id="checkbox_list" type="checkbox" checked="checked" name="unpaidbillcheck" style="visibility:hidden;">-->
                         </span>
                         <span class="cash">
                             <span class="ke">街舞</span>
                             <span class="qian">¥16.00</span>
                         </span>
-                        <span class="icon_next" href="#">
-                            <span class=" iconfont icon-fanhui"></span>
+                        <span class="icon_next">
+                            <span class="abc">
+                                 <span class="box">
+                                     <span class=" iconfont icon-fanhui"></span>
+                                 </span>
+                            </span>
                         </span>
                     </div>
                     <div class="isShow">
@@ -120,8 +130,8 @@
                         在读学校
                     </td>
                     <td class="item_cont ">
-                        <input type="text" id="0000190004" placeholder="请输入学生姓名" name="allInput" onfocus="showClearIcon('0000190004')" onclick="focusInputById('0000190004')" onblur="hideInputById('0000190004')">
-                        <img class="arrow" id="icon0000190004" style="width:1rem;display:none;display: none;position: absolute;right: 0px; top: 14px;" onclick="clearInputText('0000190004')" src="/public/images/icon_ipt_close.png">
+                        <input type="text" id="0000190004" placeholder="请输入学生姓名" name="allInput" >
+                        <img class="arrow" id="icon0000190004" style="width:1rem;display:none;display: none;position: absolute;right: 0px; top: 14px;">
                     </td>
                 </tr>
                     <tr>
@@ -131,8 +141,8 @@
                             学生姓名
                         </td>
                         <td class="item_cont ">
-                            <input type="text" id="0000190004" placeholder="请输入学生姓名" name="allInput" onfocus="showClearIcon('0000190004')" onclick="focusInputById('0000190004')" onblur="hideInputById('0000190004')">
-                            <img class="arrow" id="icon0000190004" style="width:1rem;display:none;display: none;position: absolute;right: 0px; top: 14px;" onclick="clearInputText('0000190004')" src="/public/images/icon_ipt_close.png">
+                            <input type="text" id="0000190004" placeholder="请输入学生姓名" name="allInput">
+                            <img class="arrow" id="icon0000190004" style="width:1rem;display:none;display: none;position: absolute;right: 0px; top: 14px;"
                         </td>
                     </tr>
                     <tr>
@@ -142,8 +152,8 @@
                             班级
                         </td>
                         <td class="item_cont ">
-                            <input type="text" id="0000190005" placeholder="请输入班级" name="allInput" onfocus="showClearIcon('0000190005')" onclick="focusInputById('0000190005')" onblur="hideInputById('0000190005')">
-                            <img class="arrow" id="icon0000190005" style="width:1rem;display:none;display: none;position: absolute;right: 0px; top: 14px;" onclick="clearInputText('0000190005')" src="/public/images/icon_ipt_close.png">
+                            <input type="text" id="0000190005" placeholder="请输入班级" name="allInput" onfocus="showClearIcon('0000190005')">
+                            <img class="arrow" id="icon0000190005" style="width:1rem;display:none;display: none;position: absolute;right: 0px; top: 14px;">
                         </td>
                     </tr>
                     <tr>
@@ -168,8 +178,8 @@
                             家长姓名
                         </td>
                         <td class="item_cont ">
-                            <input type="text" id="0000190007" placeholder="请输入家长姓名" name="allInput" onfocus="showClearIcon('0000190007')" onclick="focusInputById('0000190007')" onblur="hideInputById('0000190007')">
-                            <img class="arrow" id="icon0000190007" style="width:1rem;display:none;display: none;position: absolute;right: 0px; top: 14px;" onclick="clearInputText('0000190007')" src="/public/images/icon_ipt_close.png">
+                            <input type="text" id="0000190007" placeholder="请输入家长姓名" name="allInput" >
+                            <img class="arrow" id="icon0000190007" style="width:1rem;display:none;display: none;position: absolute;right: 0px; top: 14px;">
                         </td>
                     </tr>
                     <tr>
@@ -179,8 +189,8 @@
                             家长联系电话
                         </td>
                         <td class="item_cont ">
-                            <input type="text" id="0000190008" placeholder="请输入家长联系电话" name="allInput" onfocus="showClearIcon('0000190008')" onclick="focusInputById('0000190008')" onblur="hideInputById('0000190008')">
-                            <img class="arrow" id="icon0000190008" style="width:1rem;display:none;display: none;position: absolute;right: 0px; top: 14px;" onclick="clearInputText('0000190008')" src="/public/images/icon_ipt_close.png">
+                            <input type="text" id="0000190008" placeholder="请输入家长联系电话" name="allInput">
+                            <img class="arrow" id="icon0000190008" style="width:1rem;display:none;display: none;position: absolute;right: 0px; top: 14px;" >
                         </td>
 
 

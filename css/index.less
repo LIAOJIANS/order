@@ -176,7 +176,7 @@ ul,li {
             position: absolute;
             right: 0;
             top: 0;
-            .iconfont {
+            .abc {
               position: absolute;
               top: 50%;
               left: 50%;
@@ -187,9 +187,16 @@ ul,li {
             transform: rotate(90deg);
             transition: transform 0.5s ease-out;
           }
+          .up {
+            transform: rotate(0deg);
+            transition: transform 0.5s ease-out;
+          }
         }
         .isShow {
           box-sizing: border-box;
+          display: none;
+          overflow: hidden;
+          transition: height 100s;
           .orederD {
             background: #F4F8FB;
             padding: 0 22px;
