@@ -1,0 +1,386 @@
+body {
+  font-size: 15px;
+  height: 100%;
+  color: #333;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+p,
+div,
+span,
+li,
+ul,
+table,
+html,
+tr,
+td {
+  margin: 0;
+  top: 0;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  box-sizing: border-box;
+  position: relative;
+}
+.wrapper header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  z-index: 99;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  background: #0066b3;
+}
+.wrapper header div {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 50px;
+  box-sizing: border-box;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.wrapper header div .title {
+  width: auto;
+  display: block;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.wrapper header .icon_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 44px;
+  z-index: 9;
+}
+.wrapper .tab {
+  margin-top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 0 22px;
+}
+.wrapper .tab .content {
+  margin-top: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .tab .content .left {
+  width: 35%;
+  font-size: 15px;
+  color: #333;
+}
+.wrapper .tab .content .right {
+  width: 65%;
+  color: #666;
+  font-size: 15px;
+  position: relative;
+  padding-right: 30px;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.wrapper .tab .content .right .icon_right {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 21px;
+  height: 44px;
+}
+.wrapper .tab .content .right .icon_right span {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 20px;
+}
+.wrapper .orederBox {
+  padding: 20px 0;
+  background-color: #f4f8fb;
+}
+.wrapper .orederBox .orederList li {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+.wrapper .orederBox .orederList li .orederTop {
+  position: relative;
+}
+.wrapper .orederBox .orederList li .orederTop span {
+  display: inline-block;
+  box-sizing: border-box;
+}
+.wrapper .orederBox .orederList li .orederTop .checkbox {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+}
+.wrapper .orederBox .orederList li .orederTop .checkbox label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  line-height: 55px;
+  text-align: center;
+  color: #0066b3;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "iconfont" !important;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+.wrapper .orederBox .orederList li .orederTop .checkbox label:before {
+  content: "\e601";
+}
+.wrapper .orederBox .orederList li .orederTop .checkbox label.checked::after {
+  position: absolute;
+  top: -5%;
+  left: 32%;
+  content: "\e61c";
+}
+.wrapper .orederBox .orederList li .orederTop .cash {
+  padding: 10px 50px;
+  width: 100%;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .orederBox .orederList li .orederTop .cash .ke {
+  width: 50%;
+  display: inline-block;
+  line-height: 22px;
+  padding: 5px 0;
+  font-size: 16px;
+}
+.wrapper .orederBox .orederList li .orederTop .cash .qian {
+  width: 50%;
+  font-size: 16px;
+  color: #DB3764;
+  line-height: 30px;
+  text-align: right;
+  font-family: '黑体';
+}
+.wrapper .orederBox .orederList li .orederTop .icon_next {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.wrapper .orederBox .orederList li .orederTop .icon_next .iconfont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .orederBox .orederList li .orederTop .down {
+  transform: rotate(90deg);
+  transition: transform 0.5s ease-out;
+}
+.wrapper .orederBox .orederList li .isShow {
+  box-sizing: border-box;
+}
+.wrapper .orederBox .orederList li .isShow .orederD {
+  background: #F4F8FB;
+  padding: 0 22px;
+}
+.wrapper .orederBox .orederList li .isShow .orederD table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.wrapper .orederBox .orederList li .isShow .orederD table tr {
+  height: 36px;
+  position: relative;
+  border-bottom: none;
+}
+.wrapper .orederBox .orederList li .isShow .orederD table tr td {
+  position: relative;
+  padding: 5px 0;
+}
+.wrapper .orederBox .orederList li .isShow .orederD table tr .item_tit {
+  font-size: 14px;
+  padding-left: 27px;
+  line-height: 20px;
+  color: #757575;
+  width: 50%;
+  word-break: break-all;
+}
+.wrapper .orederBox .orederList li .isShow .orederD table tr .item_cont {
+  line-height: 20px;
+  font-size: 14px;
+  padding-right: 27px;
+  text-align: right;
+  color: #757575;
+  position: relative;
+  word-break: break-all;
+}
+.wrapper .orederBox .orederList li .isShow .orederD table .item {
+  border-top: 1px dashed #e2e2e2;
+}
+.wrapper .userInfo {
+  padding: 0 22px;
+  box-sizing: border-box;
+}
+.wrapper .userInfo table {
+  margin-top: 5px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.wrapper .userInfo table tbody tr {
+  border-bottom: 1px solid #ddd;
+  height: 44px;
+  width: 100%;
+}
+.wrapper .userInfo table tbody tr td {
+  position: relative;
+  padding: 5px 0;
+}
+.wrapper .userInfo table tbody tr .item_tit {
+  width: 35%;
+  font-size: 15px;
+  color: #333;
+}
+.wrapper .userInfo table tbody tr .item_cont {
+  padding: 5px 21px 5px 8px;
+  color: #666;
+  font-size: 15px;
+}
+.wrapper .userInfo table tbody tr .item_cont input {
+  width: 100%;
+  border: none;
+  font-size: 15px;
+  color: #666;
+  box-sizing: border-box;
+  outline: none;
+}
+.wrapper .userInfo table tbody tr .item_cont .icon_next {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0;
+}
+.wrapper .userInfo table tbody tr:nth-of-type(6) {
+  border-bottom: none;
+}
+.wrapper .payType {
+  background: #fafafa;
+}
+.wrapper .payType .payBox {
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+.wrapper .payType .payBox .radioBox {
+  display: inline-block;
+  width: 100%;
+  padding: 0px 0px 0px 22px;
+  position: relative;
+  left: 0;
+  border-bottom: 1px solid #d8d8d8;
+  box-sizing: border-box;
+}
+.wrapper .payType .payBox .radioBox label {
+  display: block;
+  padding: 10px 22px 10px 0px;
+  position: relative;
+}
+.wrapper .payType .payBox .radioBox label .wxLogo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.wrapper .payType .payBox .radioBox label .wxLogo .iconfont {
+  font-size: 32px;
+}
+.wrapper .payType .payBox .radioBox label .tit {
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+.wrapper .payType .payBox .radioBox label .icon_radio {
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  transform: translate(0, -50%);
+  border: 2px solid #0066b3;
+  border-radius: 50%;
+}
+.wrapper .payType .payBox .radioBox label .icon_radio .iconfont {
+  position: absolute;
+  top: -4px;
+  left: -2px;
+  font-size: 27px;
+  color: #0066b3;
+}
+.wrapper .payType .payBox .radioBox .radiobox_payWay {
+  visibility: hidden;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.wrapper .payType .payBox .WXColor {
+  color: #62b900;
+}
+.wrapper .payType .payBox .ZFBColor {
+  color: #00a5e8;
+}
+.wrapper .pay {
+  background-color: rgba(255, 255, 255, 0);
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  box-sizing: border-box;
+  padding: 0;
+}
+.wrapper .pay .btn {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  background-color: #0F70B7;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+}
+.wrapper .bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  display: none;
+}
+/*# sourceMappingURL=index.css.map */
