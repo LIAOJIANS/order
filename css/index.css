@@ -341,8 +341,8 @@ li {
 }
 .wrapper .payType .payBox .radioBox label .icon_radio .iconfont {
   position: absolute;
-  top: -4px;
-  left: -2px;
+  top: -17%;
+  left: -8%;
   font-size: 27px;
   color: #0066b3;
 }

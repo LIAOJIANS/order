@@ -1,6 +1,23 @@
 $(function () {
-    showC()
 
+    var checks = $('.checkbox label')
+    for (let i = 0; i < checks.length; i++) {
+        checks[i].onclick = function () {
+            if(checks[i].className === 'checked') {
+                checks[i].className = ''
+            } else {
+                checks[i].className = 'checked'
+            }
+        }
+    }
+    var icon_radios = $('.icon_radio')
+    for (let i = 0; i < icon_radios.length; i++) {
+        icon_radios[i].onclick = function () {
+
+        }
+    }
+
+    showC()
 })
 
 function showC() {
@@ -14,7 +31,7 @@ function showC() {
                 list[i].className = 'up'
                 isShow = false
                 orderList[i].style.display = 'none'
-                // orderList[i].style.height = 0 + 'px'
+                // orderList[i].style.height = 50 + 'px'
             } else { // 展开
                 list[i].className = 'down'
                 isShow = true
