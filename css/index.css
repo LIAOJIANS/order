@@ -344,11 +344,16 @@ li {
   border-radius: 50%;
 }
 .wrapper .payType .payBox .radioBox label .icon_radio .iconfont {
+  font-family: "iconfont" !important;
+  -webkit-font-smoothing: antialiased;
   position: absolute;
-  top: -17%;
-  left: -8%;
+  top: -19%;
+  left: -5%;
   font-size: 27px;
   color: #004d2a;
+}
+.wrapper .payType .payBox .radioBox label .icon_radio .iconfont:before {
+  content: '\e745';
 }
 .wrapper .payType .payBox .radioBox .radiobox_payWay {
   visibility: hidden;

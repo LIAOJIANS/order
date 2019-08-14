@@ -336,12 +336,18 @@ ul,li {
             transform: translate(0, -50%);
             border: 2px solid @bgc3;
             border-radius: 50%;
+
             .iconfont {
+              font-family: "iconfont" !important;
+              -webkit-font-smoothing: antialiased;
               position: absolute;
-              top: -17%;
-              left: -8%;
+              top: -19%;
+              left: -5%;
               font-size: 27px;
               color: @bgc3;
+              &:before {
+                content: '\e745';
+              }
             }
           }
         }
