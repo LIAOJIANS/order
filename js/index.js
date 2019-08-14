@@ -26,11 +26,19 @@ $(function () {
                         /*-------------------------折叠面板---------------------------*/
                         var checks = $('.checkbox label')
                         for (let i = 0; i < checks.length; i++) {
+                            /*
+                             购物车总价与已选课程的显示
+                            1、点击某一项的时候，循环所有checks值
+                            2、判断如果calssName为checked的话 可以根据他本身的索引去获取相对应的课程价格
+                            3、将价格、课程名称储存到一个数组对象中
+                            4、遍历该数组、添加模板，并计算总价
+                            */
                             checks[i].onclick = function () {
                                 if(checks[i].className === 'checked') {
                                     checks[i].className = ''
                                 } else {
                                     checks[i].className = 'checked'
+                                    // 获取文本
                                     // console.log($(this).parent('.checkbox').next('cash').children('.ke').text())
                                 }
                             }
