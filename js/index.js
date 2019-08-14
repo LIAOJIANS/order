@@ -36,20 +36,6 @@ $(function () {
                             }
                         }
 
-                        /*-------------------------折叠面板---------------------------*/
-                        var checks = $('.checkbox label')
-                        for (let i = 0; i < checks.length; i++) {
-                            checks[i].onclick = function () {
-                                if(checks[i].className === 'checked') {
-                                    checks[i].className = ''
-                                } else {
-                                    checks[i].className = 'checked'
-                                    // console.log($(this).parent('.checkbox').next('cash').children('.ke').text())
-                                }
-                            }
-                        }
-
-
                         /*-------------------------选择支付按钮单选---------------------------*/
                         var radioBox = $('.icon_radio span') // icon元素
                         var payType = 'wx' // 支付方式
@@ -85,8 +71,8 @@ $(function () {
                                     var id = CourseArray.list[index].id
                                     // 已选中课程课程名称
                                     var className = CourseArray.list[index].class
-                                    body += id + ','
-                                    class_id += className + ','
+                                    body += className + ','
+                                    class_id += id + ','
                                 }
                             }
                            if(body || class_id) {
@@ -149,21 +135,31 @@ $(function () {
                                 })
                             }
                             /*--------支付逻辑--------*/
-                            if(payType === 'wx') {
-                                $.ajax({
-                                    url: 'http://zbjy.fhyiii.cn/index/pay',
-                                    data: {
-                                        body,
-                                        class_id,
-                                        telphone: tel
-                                    },
-                                    type: 'post',
-                                    dataType: 'json',
-                                    success: function (data) {
-                                        console.log(data)
+                            if(payType === 'wx') { // 发起微信支付
+                                Dialog.init('<img src="./images/load3.gif" width="48px"/>',{
+                                    mask : 0,
+                                    addClass : 'dialog_load',
+                                    onload : function(){
+                                        $.ajax({
+                                            url: 'http://zbjy.fhyiii.cn/index/pay',
+                                            data: {
+                                                body,
+                                                class_id,
+                                                telphone: tel
+                                            },
+                                            type: 'post',
+                                            dataType: 'json',
+                                            success: function (data) {
+                                                if(data.code === 0) {
+                                                    location.href = data.url
+                                                    Dialog.close(that);
+                                                }
+                                            }
+                                        })
                                     }
                                 })
-                            } else {
+
+                            } else { // 发起支付宝支付
                                 Dialog.init('发起支付宝支付',{
                                     title : '提示',
                                     button : {
@@ -180,6 +176,7 @@ $(function () {
     });
 })
 
+// 提示信息
 function Toast(content) {
     Dialog.init(content, {
         time: 1000,
