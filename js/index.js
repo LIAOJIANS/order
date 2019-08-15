@@ -21,6 +21,19 @@ $(function () {
                         $('.right_name').text(CourseArray.title[1].value)
                         html += template("historyR",CourseArray);
                         $('#orederList').html(html)
+                        // 初始购物车
+                        $('.allK span').text(CourseArray.list.length)
+                        var nonprice = 0
+                        for (let i = 0; i < CourseArray.list.length; i++) {
+                            nonprice = nonprice + CourseArray.list[i].money * 1
+                        }
+                        // 总价添加文本
+                        $('.allP span').text('¥' + nonprice)
+                        // 一开始选中的科目
+                        var shopHtml = ''
+                        shopHtml += template("shorCar",CourseArray);
+                        $('#shopList').html(shopHtml)
+                        // 关闭加载
                         Dialog.close(that);
 
                         /*-------------------------折叠面板---------------------------*/
@@ -38,11 +51,38 @@ $(function () {
                                     checks[i].className = ''
                                 } else {
                                     checks[i].className = 'checked'
-                                    // 获取文本
-                                    // console.log($(this).parent('.checkbox').next('cash').children('.ke').text())
+                                }
+                                var shopCar = []
+                                var allPrice = 0
+                                for (let j = 0; j < checks.length; j++) {
+                                    if (checks[j].className === 'checked') {
+                                        allPrice = allPrice + CourseArray.list[j].money * 1
+                                        shopCar.push(
+                                            CourseArray.list[j]
+                                        )
+                                    }
+                                }
+                                console.log(allPrice)
+                                if (shopCar.length === 0) { // 当shopCar数组中的长度为0时
+                                    $('.block').css('display','none')
+                                    $('.none').css('display','block')
+                                    $('.allP span').text('¥0')
+                                    $('#shopList').html('')
+                                } else { // 购物车有东西
+                                    $('.block').css('display','block')
+                                    $('.none').css('display','none')
+                                    $('.allK span').text(shopCar.length)
+                                    $('.allP span').text('¥' + allPrice )
+                                   var shoplist = {
+                                       shopCar
+                                   }
+                                    var html = ''
+                                    html += template("NewshorCar",shoplist);
+                                    $('#shopList').html(html)
                                 }
                             }
                         }
+
 
                         /*-------------------------选择支付按钮单选---------------------------*/
                         var radioBox = $('.icon_radio span') // icon元素
@@ -57,6 +97,7 @@ $(function () {
                                 par_label.removeClass("iconfont").addClass("iconfont");
                             }
                         })
+
 
                         /*-------------------------缴费按钮---------------------------*/
                         $('.btn').click(function () {
@@ -216,7 +257,6 @@ function showC() {
         }
     }
 }
-
 
 // 性别选择
 function showSex() {

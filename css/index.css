@@ -294,7 +294,70 @@ li {
   transform: translate(0, -50%);
   right: 0;
 }
-.wrapper .userInfo table tbody tr:nth-of-type(6) {
+.wrapper .userInfo table tbody tr:last-of-type {
+  border-bottom: none;
+}
+.wrapper .shopCar {
+  background: #fafafa;
+}
+.wrapper .shopCar .shopList_C {
+  width: 100%;
+  box-sizing: border-box;
+}
+.wrapper .shopCar .shopList_C .shopCar_top {
+  background-color: #fff;
+  display: flex;
+  padding: 10px 22px;
+  justify-content: space-between;
+}
+.wrapper .shopCar .shopList_C .shopCar_top span {
+  display: inline-block;
+  box-sizing: border-box;
+}
+.wrapper .shopCar .shopList_C .shopCar_top .allK {
+  width: 50%;
+}
+.wrapper .shopCar .shopList_C .shopCar_top .allP {
+  text-align: right;
+  width: 50%;
+}
+.wrapper .shopCar .shopList_C .shopList table {
+  padding: 0px 22px;
+  background: #F4F8FB;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.wrapper .shopCar .shopList_C .shopList table tbody {
+  padding: 0 22px;
+}
+.wrapper .shopCar .shopList_C .shopList table tbody tr {
+  height: 36px;
+  position: relative;
+  border-bottom: 1px dashed #ddd;
+}
+.wrapper .shopCar .shopList_C .shopList table tbody tr td {
+  position: relative;
+  padding: 5px 0;
+}
+.wrapper .shopCar .shopList_C .shopList table tbody tr .Kname {
+  font-size: 14px;
+  padding-left: 27px;
+  line-height: 20px;
+  color: #757575;
+  width: 50%;
+  word-break: break-all;
+}
+.wrapper .shopCar .shopList_C .shopList table tbody tr .Kprice {
+  line-height: 20px;
+  font-size: 14px;
+  padding-right: 27px;
+  text-align: right;
+  color: #757575;
+  position: relative;
+  word-break: break-all;
+}
+.wrapper .shopCar .shopList_C .shopList table tbody tr:last-of-type {
   border-bottom: none;
 }
 .wrapper .payType {

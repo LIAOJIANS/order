@@ -289,8 +289,73 @@ ul,li {
             }
           }
         }
-        tr:nth-of-type(6) {
+        tr:last-of-type {
           border-bottom: none;
+        }
+      }
+    }
+  }
+  .shopCar {
+    background: #fafafa;
+    .shopList_C {
+      width: 100%;
+      box-sizing: border-box;
+      .shopCar_top {
+        background-color: #fff;
+        display: flex;
+        padding: 10px 22px;
+        justify-content: space-between;
+        span {
+          display: inline-block;
+          box-sizing: border-box;
+        }
+        .allK {
+          width: 50%;
+        }
+        .allP {
+          text-align: right;
+          width: 50%;
+        }
+      }
+      .shopList {
+        table {
+          padding: 0px 22px;
+          background: #F4F8FB;
+          width: 100%;
+          border-collapse: collapse;
+          border-spacing: 0;
+          tbody {
+            padding: 0 22px;
+            tr {
+              height: 36px;
+              position: relative;
+              border-bottom: 1px dashed #ddd;;
+              td {
+                position: relative;
+                padding: 5px 0;
+              }
+              .Kname {
+                font-size: 14px;
+                padding-left: 27px;
+                line-height: 20px;
+                color: #757575;
+                width: 50%;
+                word-break: break-all;
+              }
+              .Kprice {
+                line-height: 20px;
+                font-size: 14px;
+                padding-right: 27px;
+                text-align: right;
+                color: #757575;
+                position: relative;
+                word-break: break-all;
+              }
+            }
+            tr:last-of-type {
+              border-bottom: none;
+            }
+          }
         }
       }
     }

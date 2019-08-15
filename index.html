@@ -127,7 +127,25 @@
                 </table>
             </form>
         </div>
-            <!-- 支付方式-->
+<!--            购物车-->
+        <div class="shopCar">
+            <p style="margin-left: 1em; font-size:12px; color: #666;  line-height: 2.25em;">已选课程</p>
+            <div class="shopList_C">
+                <div class="shopCar_top">
+                    <span class="allK block">共选以下&nbsp;<span style="color: #004d2a; font-size: 18px"></span>&nbsp;门课程</span>
+                    <span class="allK none" style="display: none">还没加入任何进购物车</span>
+                    <span class="allP">共计:&nbsp;<span style="color: red;font-family: '黑体';"></span></span>
+                </div>
+                <div class="shopList">
+                    <table>
+                        <tbody  id="shopList">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 支付方式-->
         <div class="payType">
             <p style="margin-left: 1em; font-size:12px; color: #666;  line-height: 2.25em;">选择支付方式</p>
             <form action="" class="payBox">
@@ -169,6 +187,7 @@
         </div>
     </div>
 </body>
+<!--商品列表模板-->
 <script id="historyR" type="text/template">
     <%for(var i = 0; i < list.length; i++){%>
     <li>
@@ -209,6 +228,24 @@
             </div>
         </div>
     </li>
+    <%}%>
+</script>
+<!--初始选中购物车-->
+<script id="shorCar" type="text/template">
+    <%for(var i = 0; i < list.length; i++){%>
+    <tr>
+        <td class="Kname"><%=list[i].class%></td>
+        <td class="Kprice">¥<%=list[i].money%></td>
+    </tr>
+    <%}%>
+</script>
+<!--之后选中购物车-->
+<script id="NewshorCar" type="text/template">
+    <%for(var i = 0; i < shopCar.length; i++){%>
+        <tr>
+            <td class="Kname"><%=shopCar[i].class%></td>
+            <td class="Kprice">¥<%=shopCar[i].money%></td>
+        </tr>
     <%}%>
 </script>
 </html>
